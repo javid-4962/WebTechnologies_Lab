@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        nav {
+            display: none;
+        }
+
+        .disp {
+            display: block;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1 style="color:red"></h1>
+    <button onclick="appen(nav)">clickme</button>
+    <button onclick="show()">show</button>
+    <button  onclick="close()">close</button>
+</body>
+
+
+
+<script>
+    let nav = document.createElement('nav')
+    document.body.append(nav)
+    nav.id="close";
+    function appen(nav) {
+        let div = document.createElement('div')
+        div.innerHTML = "hell to all"
+        nav.append(div)
+    }
+    function show() {
+        nav.className = 'disp'
+    }
+    function close() {
+        document.getElementsByClassName('disp')
+    }
+</script>
+
+</html>
