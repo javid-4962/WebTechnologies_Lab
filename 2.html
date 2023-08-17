@@ -5,42 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
+    <link rel="stylesheet" href="2.css">
     <style>
-        nav {
-            display: none;
+        .green{
+            color: green;
         }
-
-        .disp {
-            display: block;
-        }
-        
     </style>
 </head>
 
+<!-- <body  contenteditable="true"> -->
+
 <body>
-    <h1 style="color:red"></h1>
-    <button onclick="appen(nav)">clickme</button>
-    <button onclick="show()">show</button>
-    <button  onclick="close()">close</button>
+    <h1>Style sheets</h1>
+    <h3>Inline styling</h3>
+    <h4>Inline styling can be done using 'style' attribute placed at opening tag &lt;p {attribute}&gt;</h4>
+    <p style="color: red;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur praesentium enim debitis,
+        amet nisi in fuga ipsam facilis atque aperiam, voluptatum temporibus aspernatur quasi nihil vel porro? Commodi,
+        iste natus!</p>
+    <h3>External styling</h3>
+    <h4>Extenal styling can be done by creating a external css file and linking it with the html page using &lt;link rel='stylesheet' href='path.css'</h4>
+    <h4 class="blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem non nulla voluptatibus, a dolore quia fugit libero quasi harum quo provident dolor eum ratione. Maxime aliquam labore molestias omnis animi?</h4>
+    <h3>Internal styling</h3>
+    <h4>Internal styling can be done by using a &lt;style&gt; tag that can be placed at the tags of head and body</h4>
+    <h4 class="green">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolorum labore fugiat porro rem aliquid, aperiam molestiae recusandae voluptate, tempora eaque suscipit deleniti magnam sint! Autem magnam omnis facere non.</h4>
+    
 </body>
 
 
 
-<script>
-    let nav = document.createElement('nav')
-    document.body.append(nav)
-    nav.id="close";
-    function appen(nav) {
-        let div = document.createElement('div')
-        div.innerHTML = "hell to all"
-        nav.append(div)
-    }
-    function show() {
-        nav.className = 'disp'
-    }
-    function close() {
-        document.getElementsByClassName('disp')
-    }
-</script>
+
 
 </html>

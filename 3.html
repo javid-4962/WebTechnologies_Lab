@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<style>
+    body{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* flex-direction: column; */
+    }
+</style>
+<body>
+    <h1>JavaScript</h1>
+    <p>JavaScript can be writen in two ways using &lt;script&gt; tag, we can write scripts in external file that will be saved as filename.js and another way is writing script in html within script tag</p>
+    <p>The external js can be linked to html using script:src</p>
+    <hr>
+    <script>
+        let a = "Hello welcome to JavaScript";//string
+        document.write(a+'<br/>');
+
+        let b = 100;//Numerical
+        document.write(b);
+
+        let c = a + b;
+        document.write("<br/>"+c);
+
+        let d = Boolean(0)//false
+        document.write('<br/>'+d);
+
+        let e = Boolean(1)//true
+        document.write('<br/>'+e);
+
+        let f = 1.2078;//floating point
+        document.write('<br/>'+f);
+
+        let g = [1,2,3,4,5,6];//array
+        document.write('<br/>'+g);
+
+        let h = {//object
+            Name:'aliya',
+            age:21,
+            phno:"+91 7396523072"
+        }
+        document.write('<br>'+h.Name);
+        document.write('<br>'+h["age"]);
+        document.write('<br>'+h["phno"]);
+
+        let i = new Object()
+        i.Name = 'raju'
+        i.age = 123451234
+        document.write('<br>'+i.Name)
+        document.write('<br>'+i.age)
+
+        function j(name, sex){
+            this.name=name;
+            this.sex = sex;
+            document.write('<br>'+name)
+            document.write('<br>'+sex)
+        }
+        j('asif','male');
+
+        // let k = prompt('Enter a number')
+        // document.write('<br/>'+k)
+
+        var number = 10;
+        document.write("<br/>"+"square root of the given number is :"+Math.sqrt(number));
+        document.write("<br/>"+"absolute number of the given number is :"+Math.abs(number));
+        document.write("<br/>"+"squate of the given number is :"+Math.pow(number,2));
+        document.write("<br/>"+"cube of the given number is :"+Math.pow(number,3)+'<br/>');
+
+        let str1 = "5";
+        let str2 = "4";
+        let str3 = "2";
+        // document.write(str1+str2-str3);
+        // document.write("5"+"4"-"2");
+
+
+        var l = new Date().toDateString();
+        document.write('<br/>'+l);
+    
+    </script>
+    <hr>
+
+    <!-- <script src="3.js"></script> -->
+</body>
+</html>
