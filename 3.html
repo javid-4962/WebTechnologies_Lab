@@ -10,15 +10,22 @@
         width: 100vw;
         height: 100vh;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        /* flex-direction: column; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        flex-direction: column;
+    }
+    button{
+        width: 150px;
+        height: 20px;
+        display: inline;
     }
 </style>
 <body>
     <h1>JavaScript</h1>
     <p>JavaScript can be writen in two ways using &lt;script&gt; tag, we can write scripts in external file that will be saved as filename.js and another way is writing script in html within script tag</p>
     <p>The external js can be linked to html using script:src</p>
+    <button onclick="allow()">show content</button>
+    <button type="button" onclick="window.location.href='2.html'">GoTo</button>
     <hr>
     <script>
         let a = "Hello welcome to JavaScript";//string
@@ -83,6 +90,29 @@
 
         var l = new Date().toDateString();
         document.write('<br/>'+l);
+
+        window.alert('Alert message!!');
+        function add(){
+            return f+b;
+        }
+        window.alert(add())
+        document.write('</br>')
+        document.writeln('hello');// create a space after the string
+        document.writeln('hello');
+        
+        let num1=10, num2=20;
+        let max = (num1>num2)?num1:num2;
+        document.write(max);
+
+        let Mainele = document.createElement('ul');
+        document.body.append(Mainele);
+        // ele.style.display="none";
+        function allow(){
+            var task = prompt("Enter your task!!");
+            ele = document.createElement('li');
+            
+            Mainele.append(ele)
+        }
     
     </script>
     <hr>
